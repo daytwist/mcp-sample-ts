@@ -195,7 +195,7 @@ server.tool(
     const formattedForecast = periods.map((period: ForecastPeriod) =>
       [
         `${period.name || "Unknown"}:`,
-        `Temperature: ${period.temperature || "Unknown"}°${period.temperatureUnit || "F"}`,
+        `Temperature: ${period.temperature ?? "Unknown"}°${period.temperatureUnit || "F"}`,
         `Wind: ${period.windSpeed || "Unknown"} ${period.windDirection || ""}`,
         `${period.shortForecast || "No forecast available"}`,
         "---",
